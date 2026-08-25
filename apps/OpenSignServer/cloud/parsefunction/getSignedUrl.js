@@ -39,6 +39,7 @@ function makeS3Client() {
     region,
     endpoint, // endpoint should be Url e.g. https://blr1.digitaloceanspaces.com)
     credentials: { accessKeyId, secretAccessKey },
+    forcePathStyle: process.env.S3_FORCE_PATH_STYLE === 'true',
   });
 }
 

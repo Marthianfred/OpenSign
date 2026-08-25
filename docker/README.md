@@ -30,7 +30,7 @@ All Dockerfiles assume **repo root as the build context** (COPY paths are relati
   - `PARSE_MOUNT`
   - `SERVER_URL`
   - `PUBLIC_URL`
-  - Storage (S3 / DigitalOcean Spaces compatible): `DO_SPACE`, `DO_ENDPOINT`, `DO_BASEURL`, `DO_ACCESS_KEY_ID`, `DO_SECRET_ACCESS_KEY`, `DO_REGION` — or set `USE_LOCAL=true` to use local disk storage instead
+  - Storage (S3 / DigitalOcean Spaces compatible): `DO_SPACE`, `DO_ENDPOINT`, `DO_BASEURL`, `DO_ACCESS_KEY_ID`, `DO_SECRET_ACCESS_KEY`, `DO_REGION` — or set `USE_LOCAL=true` to use local disk storage instead. When pointing `DO_ENDPOINT` at a self-hosted S3-compatible store (e.g. MinIO), also set `S3_FORCE_PATH_STYLE=true` — MinIO needs path-style addressing (`endpoint/bucket/key`), not the virtual-hosted-style AWS S3 / DO Spaces use by default.
   - Email (the app will not initialize unless one path is fully set): either `MAILGUN_API_KEY`, `MAILGUN_DOMAIN`, `MAILGUN_SENDER`, or `SMTP_ENABLE=true` with `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER_EMAIL`, `SMTP_PASS`
   - `PFX_BASE64` and `PASS_PHRASE` (document signing certificate, optional but needed for PDF signing certificates)
 

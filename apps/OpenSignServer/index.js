@@ -42,6 +42,7 @@ if (useLocal !== 'true') {
         },
         endpoint: spacesEndpoint,
         signatureVersion: 'v4',
+        s3ForcePathStyle: process.env.S3_FORCE_PATH_STYLE === 'true',
       },
     };
     fsAdapter = new S3Adapter(s3Options);

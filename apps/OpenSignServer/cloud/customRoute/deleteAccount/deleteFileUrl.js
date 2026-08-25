@@ -23,6 +23,8 @@ function createS3Client({ region, accessKeyId, secretAccessKey, endpoint = null 
     config.endpoint = `https://${endpoint}`;
   }
 
+  config.forcePathStyle = process.env.S3_FORCE_PATH_STYLE === 'true';
+
   return new S3Client(config);
 }
 
