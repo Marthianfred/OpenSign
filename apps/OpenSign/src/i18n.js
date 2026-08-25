@@ -11,10 +11,11 @@ i18n
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json"
     },
-    fallbackLng: "en", // Fallback to English if no other language is detected
+    fallbackLng: "es", // Fallback to Spanish if no other language is detected
+    lng: "es", // Force Spanish by default, overridden once the user picks a language (persisted below)
     detection: {
-      // Specifies the default language to fall back to if the detected language is not available.
-      order: ["localStorage", "navigator"],
+      // Only respect a language the user explicitly chose and had persisted; ignore browser locale.
+      order: ["localStorage"],
       // Defines where the detected language should be cached.
       caches: ["localStorage"]
     },

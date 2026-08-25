@@ -5,15 +5,15 @@ import { useTranslation } from "react-i18next";
 function SelectLanguage(props) {
   const { i18n } = useTranslation();
   const languages = [
+    { value: "es", text: "Español" }, //spanish
     { value: "en", text: "English" }, //english
-    { value: "es", text: "Española" }, //spanish
     { value: "fr", text: "Français" }, //french
     { value: "it", text: "Italiano" }, //italian
     { value: "de", text: "Deutsch" }, //german
     { value: "hi", text: "हिन्दी" }, //hindi
     { value: "kr", text: "한국어" } //korean
   ];
-  const defaultLanguage = i18next.language || "en";
+  const defaultLanguage = i18next.language || "es";
   const [lang, setLang] = useState(defaultLanguage);
   // This function put query that helps to change the language
   const handleChangeLang = (e) => {
