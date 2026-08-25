@@ -16,7 +16,7 @@ import { emailRegex } from "../constant/const";
 
 const AddAdmin = () => {
   const appName =
-    "OpenSign™";
+    "WaveSign™";
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -281,7 +281,7 @@ const AddAdmin = () => {
               <form onSubmit={handleSubmit}>
                 <div className="w-full my-4 op-card bg-base-100 shadow-md outline outline-1 outline-slate-300/50">
                   <h2 className="text-[30px] text-center mt-3 font-medium">
-                    {t("opensign-setup", { appName })}
+                    {t("wavesign-setup", { appName })}
                   </h2>
                   <NavLink
                     to="https://discord.com/invite/xe9TDuyAyj"
@@ -294,7 +294,7 @@ const AddAdmin = () => {
                       aria-hidden="true"
                       className="fa-brands fa-discord ml-1"
                     ></i>
-                    {/* <span className="fa-sr-only">OpenSign&apos;s Discord</span> */}
+                    {/* <span className="fa-sr-only">WaveSign&apos;s Discord</span> */}
                   </NavLink>
                   <div className="px-6 py-3 text-xs">
                     <label className="block ">
@@ -471,15 +471,15 @@ const AddAdmin = () => {
                       <input
                         type="checkbox"
                         className="op-checkbox op-checkbox-sm"
-                        id="subscribetoopensign"
+                        id="subscribetowavesign"
                         checked={isSubscribeNews}
                         onChange={(e) => setIsSubscribeNews(e.target.checked)}
                       />
                       <label
                         className="text-xs cursor-pointer ml-1 mb-0"
-                        htmlFor="subscribetoopensign"
+                        htmlFor="subscribetowavesign"
                       >
-                        {t("subscribe-to-opensign")}
+                        {t("subscribe-to-wavesign")}
                       </label>
                     </div>
                   </div>

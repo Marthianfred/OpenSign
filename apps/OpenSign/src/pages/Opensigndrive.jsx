@@ -30,8 +30,8 @@ const AppLoader = () => {
 };
 function Opensigndrive() {
   const appName =
-    "OpenSign™";
-  const drivename = appName === "OpenSign™" ? "OpenSign™" : "";
+    "WaveSign™";
+  const drivename = appName === "WaveSign™" ? "WaveSign™" : "";
   const { t } = useTranslation();
   const navigate = useNavigate();
   const scrollRef = useRef(null);
@@ -93,7 +93,7 @@ function Opensigndrive() {
       selector: '[data-tut="reactourFirst"]',
       content: () => (
         <TourContentWithBtn
-          message={t("tour-mssg.opensign-drive-1")}
+          message={t("tour-mssg.wavesign-drive-1")}
           isChecked={handleDontShow}
         />
       ),
@@ -104,7 +104,7 @@ function Opensigndrive() {
       selector: '[data-tut="reactourSecond"]',
       content: () => (
         <TourContentWithBtn
-          message={t("tour-mssg.opensign-drive-2")}
+          message={t("tour-mssg.wavesign-drive-2")}
           isChecked={handleDontShow}
         />
       ),
@@ -115,7 +115,7 @@ function Opensigndrive() {
       selector: '[data-tut="reactourThird"]',
       content: () => (
         <TourContentWithBtn
-          message={t("tour-mssg.opensign-drive-3")}
+          message={t("tour-mssg.wavesign-drive-3")}
           isChecked={handleDontShow}
         />
       ),
@@ -126,7 +126,7 @@ function Opensigndrive() {
       selector: '[data-tut="reactourForth"]',
       content: () => (
         <TourContentWithBtn
-          message={t("tour-mssg.opensign-drive-4")}
+          message={t("tour-mssg.wavesign-drive-4")}
           isChecked={handleDontShow}
         />
       ),
@@ -156,7 +156,7 @@ function Opensigndrive() {
             selector: '[data-tut="reactourFifth"]',
             content: () => (
               <TourContentWithBtn
-                message={t("tour-mssg.opensign-drive-5")}
+                message={t("tour-mssg.wavesign-drive-5")}
                 isChecked={handleDontShow}
               />
             ),
@@ -167,7 +167,7 @@ function Opensigndrive() {
             selector: '[data-tut="reactourSixth"]',
             content: () => (
               <TourContentWithBtn
-                message={t("tour-mssg.opensign-drive-6")}
+                message={t("tour-mssg.wavesign-drive-6")}
                 isChecked={handleDontShow}
               />
             ),
@@ -178,7 +178,7 @@ function Opensigndrive() {
             selector: '[data-tut="reactourSeventh"]',
             content: () => (
               <TourContentWithBtn
-                message={t("tour-mssg.opensign-drive-7")}
+                message={t("tour-mssg.wavesign-drive-7")}
                 isChecked={handleDontShow}
               />
             ),
@@ -209,7 +209,7 @@ function Opensigndrive() {
       }
       if (!docId) {
         setFolderName([
-          { name: t("OpenSign-drive", { appName: drivename }), objectId: "" }
+          { name: t("WaveSign-drive", { appName: drivename }), objectId: "" }
         ]);
       }
     } catch (e) {

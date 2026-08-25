@@ -63,7 +63,7 @@
   height: 150px;
 }
 
-[data-theme="opensigndark"] .tabWidth {
+[data-theme="wavesigndark"] .tabWidth {
   border: 1px solid #1f2937 !important;
   background-color: #1f2937 !important;
 }
@@ -86,41 +86,41 @@
 }
 
 /* Dark mode support for initials box in /managesign */
-[data-theme="opensigndark"] .intialSignature {
+[data-theme="wavesigndark"] .intialSignature {
   background-color: #1f2937 !important;
   border-color: #4b5563 !important;
 }
 
-[data-theme="opensigndark"] .intialSignatureCanvas {
+[data-theme="wavesigndark"] .intialSignatureCanvas {
   background-color: #1f2937 !important;
   border-color: #4b5563 !important;
 }
 
 /* Also support signature canvas for consistency */
-[data-theme="opensigndark"] .signatureCanvas {
+[data-theme="wavesigndark"] .signatureCanvas {
   background-color: #1f2937 !important;
   border-color: #4b5563 !important;
 }
 
 /* Dark mode support for initials box in /managesign */
-[data-theme="opensigndark"] .intialSignature {
+[data-theme="wavesigndark"] .intialSignature {
   background-color: #1f2937 !important;
   border-color: #4b5563 !important;
 }
 
-[data-theme="opensigndark"] .intialSignatureCanvas {
-  background-color: #1f2937 !important;
-  border-color: #4b5563 !important;
-}
-
-/* Also support signature canvas for consistency */
-[data-theme="opensigndark"] .signatureCanvas {
+[data-theme="wavesigndark"] .intialSignatureCanvas {
   background-color: #1f2937 !important;
   border-color: #4b5563 !important;
 }
 
 /* Also support signature canvas for consistency */
-[data-theme="opensigndark"] .mysignatureCanvas {
+[data-theme="wavesigndark"] .signatureCanvas {
+  background-color: #1f2937 !important;
+  border-color: #4b5563 !important;
+}
+
+/* Also support signature canvas for consistency */
+[data-theme="wavesigndark"] .mysignatureCanvas {
   background-color: #1f2937 !important;
   border-color: #4b5563 !important;
 }

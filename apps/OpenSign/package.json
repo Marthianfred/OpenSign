@@ -1,5 +1,5 @@
 {
-  "name": "open_sign",
+  "name": "wavesign",
   "version": "2.37.0",
   "private": true,
   "dependencies": {

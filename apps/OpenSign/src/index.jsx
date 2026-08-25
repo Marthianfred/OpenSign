@@ -23,7 +23,7 @@ if (localStorage.getItem("showUpgradeProgress")) {
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
-  document.documentElement.setAttribute("data-theme", "opensigndark");
+  document.documentElement.setAttribute("data-theme", "wavesigndark");
 }
 
 

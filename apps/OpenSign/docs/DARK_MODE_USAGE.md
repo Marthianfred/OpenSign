@@ -1,7 +1,7 @@
 # Tailwind Dark Mode Usage Guide
 
 ## Overview
-This guide shows how to use the new Tailwind utilities for better dark mode visibility in OpenSign.
+This guide shows how to use the new Tailwind utilities for better dark mode visibility in WaveSign.
 
 ## Button Styling
 
@@ -134,7 +134,7 @@ All ReactTooltip instances now support dark mode:
 ```
 
 ### HoverCard Balloon UI
-The balloon tooltips in OpenSign Drive now properly support dark mode:
+The balloon tooltips in WaveSign Drive now properly support dark mode:
 
 ```jsx
 // These automatically get dark styling in dark mode
@@ -210,4 +210,4 @@ The balloon tooltips in OpenSign Drive now properly support dark mode:
 
 ## Migration Notes
 
-All existing tooltip and tour components will automatically inherit the new dark mode styling when the theme is set to `opensigndark`. No code changes required for existing implementations.
+All existing tooltip and tour components will automatically inherit the new dark mode styling when the theme is set to `wavesigndark`. No code changes required for existing implementations.

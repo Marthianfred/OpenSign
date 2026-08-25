@@ -9,7 +9,7 @@ export const SCALE_STEPS = [
 // Dynamic icon color function for better dark mode visibility
 export const getThemeIconColor = () => {
   const theme = document.documentElement.getAttribute("data-theme");
-  return theme === "opensigndark" ? "#CCCCCC" : "#686968";
+  return theme === "wavesigndark" ? "#CCCCCC" : "#686968";
 };
 export const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const maxTitleLength = 250; // 250 characters

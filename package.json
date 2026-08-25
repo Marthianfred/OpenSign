@@ -1,7 +1,7 @@
 {
-  "name": "opensign",
+  "name": "wavesign",
   "version": "1.0.6",
-  "description": "Free and open source alternative to DocuSign",
+  "description": "Free and open source alternative to DocuSign (based on OpenSign)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

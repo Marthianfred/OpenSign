@@ -108,7 +108,7 @@ body {
 /* You can use classes like: icon-improved, icon-muted, icon-disabled, op-btn-vscode-disabled */
 
 /* React-tour and ReactTooltip dark mode styling */
-[data-theme="opensigndark"] {
+[data-theme="wavesigndark"] {
   .op-border-hover {
     @apply border-gray-700 hover:border-base-content;
   }

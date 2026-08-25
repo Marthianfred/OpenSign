@@ -111,7 +111,7 @@ const Header = ({ isConsole, setIsLoggingOut }) => {
   useEffect(() => {
     const updateThemeStatus = () => {
       const isDarkTheme =
-        document.documentElement.getAttribute("data-theme") === "opensigndark";
+        document.documentElement.getAttribute("data-theme") === "wavesigndark";
       setIsDarkTheme(isDarkTheme);
     };
     updateThemeStatus();

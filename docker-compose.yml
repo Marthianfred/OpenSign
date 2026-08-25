@@ -1,7 +1,9 @@
 services:
   server:
-    image: opensign/opensignserver:main
-    container_name: OpenSignServer-container
+    build:
+      context: .
+      dockerfile: docker/server.Dockerfile
+    container_name: WaveSignServer-container
     volumes:
       - opensign-files:/usr/src/app/files
     ports:
@@ -25,11 +27,13 @@ services:
     networks:
       - app-network
   client:
-    image: opensign/opensign:main
-    container_name: OpenSign-container
+    build:
+      context: .
+      dockerfile: docker/client.Dockerfile
+    container_name: WaveSign-container
     depends_on:
       - server
-    env_file: .env.prod  
+    env_file: .env.prod
     ports:
       - "3000:3000"
     networks:

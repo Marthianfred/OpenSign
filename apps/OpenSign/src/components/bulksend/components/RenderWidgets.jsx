@@ -31,7 +31,7 @@ const inputValidation = (pattern, type) => {
   if (pattern) return pattern;
   return inputTypes[type] || "";
 };
-const canavasTheme = `opensigncss:bg-white opensigndark:bg-[#121212] opensigndark:border-[#f6f3f4]/20 opensigncss:border-gray-300 opensigndark:hover:border-white opensigncss:hover:border-black border-[1px]`;
+const canavasTheme = `wavesigncss:bg-white wavesigndark:bg-[#121212] wavesigndark:border-[#f6f3f4]/20 wavesigncss:border-gray-300 wavesigndark:hover:border-white wavesigncss:hover:border-black border-[1px]`;
 
 const widgetLabelCss = (isRequired = false) => {
   return `${isRequired ? "after:content-['_*'] after:text-red-500" : ""} block text-xs font-semibold`;

@@ -1,11 +1,11 @@
 
-# Contributing to OpenSign
+# Contributing to WaveSign
 
-Hello there! Thank you for considering contributing to OpenSign, the open-source alternative to DocuSign. OpenSign is not just a project, but a community endeavor that aims to create a robust, user-friendly, and secure electronic signature solution. Your contributions, irrespective of their size, are valuable in making this vision a reality.
+Hello there! Thank you for considering contributing to WaveSign, the open-source alternative to DocuSign (based on OpenSign). WaveSign is not just a project, but a community endeavor that aims to create a robust, user-friendly, and secure electronic signature solution. Your contributions, irrespective of their size, are valuable in making this vision a reality.
 
-## Hacktoberfest at OpenSign
+## Hacktoberfest at WaveSign
 
-We are excited to announce that OpenSign is participating in Hacktoberfest! Hacktoberfest is a month-long celebration of open source where contributors can earn swag by contributing to open source projects. It's a fantastic opportunity to contribute, learn, and engage with the community. We welcome contributions of all kinds, and we are looking forward to seeing your contributions!
+We are excited to announce that WaveSign is participating in Hacktoberfest! Hacktoberfest is a month-long celebration of open source where contributors can earn swag by contributing to open source projects. It's a fantastic opportunity to contribute, learn, and engage with the community. We welcome contributions of all kinds, and we are looking forward to seeing your contributions!
 
 ### Hacktoberfest Guidelines
 
@@ -30,12 +30,12 @@ We are excited to announce that OpenSign is participating in Hacktoberfest! Hack
 
 ## Getting Started
 
-- Fork the [OpenSign repository](https://github.com/OpenSignLabs/OpenSign) to your GitHub account.
+- Fork the [repository](https://github.com/OpenSignLabs/OpenSign) to your GitHub account.
 - Clone your fork locally: `git clone https://github.com/your-username/OpenSign.git`
 - Create a new branch for your contribution: `git checkout -b feature/your-feature-name`
 - Make your contributions.
 - Push your branch to your fork: `git push origin feature/your-feature-name`
-- Create a Pull Request from your fork to the OpenSign repository.
+- Create a Pull Request from your fork to the repository.
 
 ## Code of Conduct
 

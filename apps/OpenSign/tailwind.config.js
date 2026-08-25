@@ -8,8 +8,8 @@ module.exports = {
     require("daisyui"),
     function ({ addUtilities, addVariant }) {
       // ✅ Variants that match html[data-theme="..."] (or any ancestor with data-theme)
-      addVariant("opensigncss", '[data-theme="opensigncss"] &');
-      addVariant("opensigndark", '[data-theme="opensigndark"] &');
+      addVariant("wavesigncss", '[data-theme="wavesigncss"] &');
+      addVariant("wavesigndark", '[data-theme="wavesigndark"] &');
 
       addUtilities({
         // Prevent iOS long-press popup
@@ -31,23 +31,23 @@ module.exports = {
           }
         },
         // Dark mode icon improvements using DaisyUI theme detection
-        '[data-theme="opensigndark"] .icon-improved': {
+        '[data-theme="wavesigndark"] .icon-improved': {
           color: "#CCCCCC !important"
         },
-        '[data-theme="opensigndark"] .icon-muted': {
+        '[data-theme="wavesigndark"] .icon-muted': {
           color: "#999999 !important"
         },
-        '[data-theme="opensigndark"] .icon-disabled': {
+        '[data-theme="wavesigndark"] .icon-disabled': {
           color: "#858585 !important"
         },
         // Gray text improvements for dark mode
-        '[data-theme="opensigndark"] .text-gray-500': {
+        '[data-theme="wavesigndark"] .text-gray-500': {
           color: "#CCCCCC !important"
         },
-        '[data-theme="opensigndark"] .text-gray-400': {
+        '[data-theme="wavesigndark"] .text-gray-400': {
           color: "#999999 !important"
         },
-        '[data-theme="opensigndark"] .text-gray-600': {
+        '[data-theme="wavesigndark"] .text-gray-600': {
           color: "#CCCCCC !important"
         },
         // CSS variable utilities that work with arbitrary values
@@ -79,14 +79,14 @@ module.exports = {
     // themes: true,
     themes: [
       {
-        opensigndark: {
-          primary: "#007ACC", // VS Code blue - CTA & highlight color
+        wavesigndark: {
+          primary: "#9D3398", // Wave grape - CTA & highlight color
           "primary-content": "#FFFFFF",
 
           secondary: "#1F2937", // Sidebar background (darker slate)
           "secondary-content": "#E5E7EB",
 
-          accent: "#4A9EFF", // Lighter VS Code blue for hover, minor CTA
+          accent: "#803380", // Wave deep-iris-light for hover, minor CTA
           "accent-content": "#FFFFFF",
 
           neutral: "#3C3C3C", // VS Code inactive/disabled element background
@@ -121,19 +121,19 @@ module.exports = {
         }
       },
       {
-        opensigncss: {
-          primary: "#002864",
-          "primary-content": "#cacccf",
+        wavesigncss: {
+          primary: "#9D3398",
+          "primary-content": "#FFFFFF",
           secondary: "#29354a",
           "secondary-content": "#c8d1e0",
-          accent: "#E10032",
-          "accent-content": "#ffd8d5",
+          accent: "#613A80",
+          "accent-content": "#FFFFFF",
           neutral: "#c1ccdb",
           "neutral-content": "#111312",
-          "base-100": "#ffffff",
+          "base-100": "#FFFFFF",
           "base-200": "#dedede",
           "base-300": "#bebebe",
-          "base-content": "#161616",
+          "base-content": "#202020",
           info: "#00b6ff",
           "info-content": "#f5f5f4",
           success: "#00a96e",

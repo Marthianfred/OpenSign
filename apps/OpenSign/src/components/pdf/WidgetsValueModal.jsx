@@ -72,7 +72,7 @@ const fontOptions = [
 ];
 const textInputcls =
   "op-input op-input-bordered op-input-sm focus:outline-none text-base-content hover:border-base-content w-full text-xs";
-const isTabCls = "bg-[#002864] text-white rounded-[15px] px-[10px] py-[4px]";
+const isTabCls = "bg-[#9D3398] text-white rounded-[15px] px-[10px] py-[4px]";
 
 function WidgetsValueModal(props) {
   const dispatch = useDispatch();
@@ -1507,7 +1507,7 @@ function WidgetsValueModal(props) {
             {/* Input + format group */}
             <div className="inline-flex flex-col items-center">
               {/* Date input */}
-              <div className="border-[1px] opensigncss:border-gray-300 opensigndark:border-base-content text-base-content rounded-[2px] px-3 py-1 inline-flex">
+              <div className="border-[1px] wavesigncss:border-gray-300 wavesigndark:border-base-content text-base-content rounded-[2px] px-3 py-1 inline-flex">
                 <DatePicker
                   renderCustomHeader={({ date, changeYear, changeMonth }) => (
                     <div className="flex items-center gap-2 ml-2">
