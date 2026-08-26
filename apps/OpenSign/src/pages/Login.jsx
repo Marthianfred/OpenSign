@@ -426,113 +426,112 @@ function Login() {
           <div
             aria-labelledby="loginHeading"
             role="region"
-            className="min-h-screen flex items-center justify-center px-4 py-10 md:px-10 lg:px-16"
+            className="min-h-screen grid grid-cols-1 md:grid-cols-2"
           >
-            <div className="w-full max-w-4xl md:p-4 lg:p-10 p-4 bg-base-100 text-base-content op-card">
-              <div className="w-[250px] h-[66px] inline-block overflow-hidden">
-                {image && (
-                  <img
-                    src={image}
-                    className="object-contain h-full"
-                    alt="applogo"
-                  />
-                )}
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2">
-                <div>
-                  <form onSubmit={handleLoginBtn} aria-label="Login Form">
-                    <h1 className="text-[30px] mt-6">{t("welcome")}</h1>
-                    <fieldset>
-                      <legend className="text-[12px] text-[#878787]">
-                        {t("Login-to-your-account")}
-                      </legend>
-                      <div className="w-full px-6 py-3 my-1 op-card bg-base-100 shadow-md outline outline-1 outline-slate-300/50">
-                        <label className="block text-xs" htmlFor="email">
-                          {t("email")}
-                        </label>
+            <div className="flex flex-col justify-center px-6 py-12 sm:px-12 lg:px-20 bg-[#1a0f2e] text-white">
+              <div className="w-full max-w-sm mx-auto">
+                <div className="w-[180px] h-[60px] mb-10 overflow-hidden">
+                  {image && (
+                    <img
+                      src={image}
+                      className="object-contain h-full"
+                      alt="applogo"
+                    />
+                  )}
+                </div>
+                <form onSubmit={handleLoginBtn} aria-label="Login Form">
+                  <h1 className="text-[28px] font-semibold">{t("welcome")}</h1>
+                  <p className="text-[13px] text-white/60 mt-1 mb-8">
+                    {t("Login-to-your-account")}
+                  </p>
+                  <fieldset className="space-y-5">
+                    <div>
+                      <label
+                        className="block text-xs font-medium uppercase tracking-wide text-white/70 mb-2"
+                        htmlFor="email"
+                      >
+                        {t("email")}
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        className="op-input op-input-bordered w-full text-sm bg-white/5 border-white/15 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-400"
+                        name="email"
+                        autoComplete="username"
+                        value={state.email}
+                        onChange={handleChange}
+                        required
+                        onInvalid={(e) =>
+                          e.target.setCustomValidity(t("input-required"))
+                        }
+                        onInput={(e) => e.target.setCustomValidity("")}
+                      />
+                    </div>
+                    <div>
+                      <label
+                        className="block text-xs font-medium uppercase tracking-wide text-white/70 mb-2"
+                        htmlFor="password"
+                      >
+                        {t("password")}
+                      </label>
+                      <div className="relative">
                         <input
-                          id="email"
-                          type="email"
-                          className="op-input op-input-bordered op-input-sm focus:outline-none hover:border-base-content w-full text-xs"
-                          name="email"
-                          autoComplete="username"
-                          value={state.email}
+                          id="password"
+                          type={state.passwordVisible ? "text" : "password"}
+                          className="op-input op-input-bordered w-full text-sm bg-white/5 border-white/15 text-white placeholder:text-white/30 focus:outline-none focus:border-brand-400"
+                          name="password"
+                          value={state.password}
+                          autoComplete="current-password"
                           onChange={handleChange}
-                          required
                           onInvalid={(e) =>
                             e.target.setCustomValidity(t("input-required"))
                           }
                           onInput={(e) => e.target.setCustomValidity("")}
+                          required
                         />
-                        <hr className="my-1 border-none" />
-                            <label className="block text-xs" htmlFor="password">
-                              {t("password")}
-                            </label>
-                            <div className="relative">
-                              <input
-                                id="password"
-                                type={
-                                  state.passwordVisible ? "text" : "password"
-                                }
-                                className="op-input op-input-bordered op-input-sm focus:outline-none hover:border-base-content w-full text-xs"
-                                name="password"
-                                value={state.password}
-                                autoComplete="current-password"
-                                onChange={handleChange}
-                                onInvalid={(e) =>
-                                  e.target.setCustomValidity(
-                                    t("input-required")
-                                  )
-                                }
-                                onInput={(e) => e.target.setCustomValidity("")}
-                                required
-                              />
-                              <span
-                                className="absolute cursor-pointer top-[50%] right-[10px] -translate-y-[50%] text-base-content"
-                                onClick={togglePasswordVisibility}
-                              >
-                                {state.passwordVisible ? (
-                                  <i className="fa-light fa-eye-slash text-xs pb-1" /> // Close eye icon
-                                ) : (
-                                  <i className="fa-light fa-eye text-xs pb-1 " /> // Open eye icon
-                                )}
-                              </span>
-                            </div>
-                          <div className="relative mt-1">
-                            <NavLink
-                              to="/forgetpassword"
-                              className="text-[13px] op-link op-link-primary underline-offset-1 focus:outline-none ml-1"
-                            >
-                              {t("forgot-password")}?
-                            </NavLink>
-                          </div>
+                        <span
+                          className="absolute cursor-pointer top-[50%] right-[10px] -translate-y-[50%] text-white/60"
+                          onClick={togglePasswordVisibility}
+                        >
+                          {state.passwordVisible ? (
+                            <i className="fa-light fa-eye-slash text-xs pb-1" /> // Close eye icon
+                          ) : (
+                            <i className="fa-light fa-eye text-xs pb-1 " /> // Open eye icon
+                          )}
+                        </span>
                       </div>
-                    </fieldset>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-center text-xs font-bold mt-2">
-                      <button
-                        type="submit"
-                        className="op-btn op-btn-primary"
-                        disabled={state.loading}
+                    </div>
+                    <div>
+                      <NavLink
+                        to="/forgetpassword"
+                        className="text-[13px] text-brand-300 hover:text-brand-200 underline-offset-1 focus:outline-none"
                       >
-                        {state.loading ? t("loading") : t("login")}
-                      </button>
+                        {t("forgot-password")}?
+                      </NavLink>
                     </div>
-                  </form>
+                  </fieldset>
+                  <button
+                    type="submit"
+                    className="op-btn op-btn-primary w-full mt-8 text-xs font-bold"
+                    disabled={state.loading}
+                  >
+                    {state.loading ? t("loading") : t("login")}
+                  </button>
+                </form>
+                <div className="mt-8">
+                  <SelectLanguage />
                 </div>
-                {width >= 768 && (
-                  <div className="place-self-center">
-                    <div className="mx-auto md:w-[300px] lg:w-[400px] xl:w-[500px]">
-                      <img
-                        src={login_img}
-                        alt="The image illustrates a person from behind, seated at a desk with a four-monitor computer setup, in an environment with a light blue and white color scheme, featuring a potted plant to the right."
-                        width="100%"
-                      />
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
-            <SelectLanguage />
+            {width >= 768 && (
+              <div className="relative hidden md:flex items-center justify-center bg-gradient-to-br from-[#613A80] via-[#803380] to-[#9D3398] overflow-hidden">
+                <img
+                  src={login_img}
+                  alt="The image illustrates a person from behind, seated at a desk with a four-monitor computer setup."
+                  className="w-[70%] max-w-[420px] opacity-90"
+                />
+              </div>
+            )}
             {state.alertMsg && (
               <Alert type={state.alertType}>{state.alertMsg}</Alert>
             )}
