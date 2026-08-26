@@ -20,6 +20,19 @@ COPY apps/OpenSign/entrypoint.sh .
 # make the entrypoint.sh file executable
 RUN chmod +x entrypoint.sh
 
+# React/Vite bakes REACT_APP_* vars into the bundle at build time, but Railway
+# only injects service variables at container runtime, not into `docker build`.
+# Accept them as build args (set as service Variables in Railway; they are
+# forwarded automatically as build args of the same name) so the built bundle
+# actually matches this deployment's server APP_ID/URL instead of silently
+# falling back to defaults that won't match the server.
+ARG REACT_APP_APPID
+ARG REACT_APP_SERVERURL
+ARG REACT_APP_GTM
+ENV REACT_APP_APPID=${REACT_APP_APPID}
+ENV REACT_APP_SERVERURL=${REACT_APP_SERVERURL}
+ENV REACT_APP_GTM=${REACT_APP_GTM}
+
 # Define environment variables if needed
 ENV NODE_ENV=production
 ENV GENERATE_SOURCEMAP=false

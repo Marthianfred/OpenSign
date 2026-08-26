@@ -16,6 +16,7 @@ All Dockerfiles assume **repo root as the build context** (COPY paths are relati
   - `REACT_APP_APPID` (must match the server's `APP_ID` — leave as `opensign` unless you also change it on the server)
   - `GENERATE_SOURCEMAP` (optional, defaults to `false`)
   - `REACT_APP_GTM` (optional)
+- **Important:** `REACT_APP_*` vars are baked into the JS bundle at build time by React/Vite, not read at container runtime. Railway only injects a service's Variables at build time when the Dockerfile declares a matching `ARG` — this Dockerfile does that for `REACT_APP_APPID`, `REACT_APP_SERVERURL`, and `REACT_APP_GTM`. Set these as **service Variables** in Railway (not just runtime env) so they land in the build; if `REACT_APP_APPID` doesn't match the server's `APP_ID` at build time, every API call fails silently and the client falls back to an "admin already exists" style error even on a fresh database.
 
 ## server.Dockerfile — WaveSign server (Node/Parse)
 
