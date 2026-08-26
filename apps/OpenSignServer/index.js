@@ -42,7 +42,9 @@ if (useLocal !== 'true') {
         },
         endpoint: spacesEndpoint,
         signatureVersion: 'v4',
-        s3ForcePathStyle: process.env.S3_FORCE_PATH_STYLE === 'true',
+        // @parse/s3-files-adapter v5.x uses AWS SDK v3 (@aws-sdk/client-s3) internally,
+        // which expects `forcePathStyle`, not the SDK v2 name `s3ForcePathStyle`.
+        forcePathStyle: process.env.S3_FORCE_PATH_STYLE === 'true',
       },
     };
     fsAdapter = new S3Adapter(s3Options);
