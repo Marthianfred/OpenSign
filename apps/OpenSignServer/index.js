@@ -33,8 +33,12 @@ if (useLocal !== 'true') {
       region: process.env.DO_REGION,
       directAccess: true,
       preserveFileName: true,
-      presignedUrl: true,
-      presignedUrlExpires: 900,
+      // Presigned URLs are signed against s3overrides.endpoint (the internal
+      // MinIO address used for API calls), but served to browsers via a
+      // different public domain (DO_BASEURL) — since SigV4 signs the Host
+      // header, that mismatch always produces SignatureDoesNotMatch. The
+      // bucket is already public-read, so skip signing entirely.
+      presignedUrl: false,
       s3overrides: {
         credentials: {
           accessKeyId: process.env.DO_ACCESS_KEY_ID,
