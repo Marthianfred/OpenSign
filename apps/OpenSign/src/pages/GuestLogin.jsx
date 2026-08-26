@@ -309,8 +309,8 @@ function GuestLogin() {
       {isLoading.isLoad ? (
         <LoaderWithMsg isLoading={isLoading} />
       ) : (
-        <div className="pb-1 md:pb-4 pt-10 md:px-10 lg:px-16">
-          <div className="md:p-4 lg:p-10 p-4 text-base-content bg-base-100 op-card shadow-md">
+        <div className="min-h-screen flex items-center justify-center px-4 py-10 md:px-10 lg:px-16">
+          <div className="w-full max-w-4xl md:p-4 lg:p-10 p-4 text-base-content bg-base-100 op-card shadow-md">
             <div className="w-[250px] h-[66px] inline-block overflow-hidden mb-6">
               {appLogo && (
                 <img
