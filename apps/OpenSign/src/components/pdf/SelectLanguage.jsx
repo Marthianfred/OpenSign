@@ -30,7 +30,8 @@ function SelectLanguage(props) {
       <select
         value={lang}
         onChange={handleChangeLang}
-        className={`w-[180px] op-select op-select-bordered op-select-sm`}
+        style={{ width: "180px" }}
+        className={`op-select op-select-bordered op-select-sm`}
       >
         <option disabled>select</option>
         {languages.map((item) => {

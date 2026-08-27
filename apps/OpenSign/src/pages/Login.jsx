@@ -520,12 +520,12 @@ function Login() {
                   </form>
                 </div>
                 {width >= 768 && (
-                  <div className="place-self-center">
-                    <div className="mx-auto md:w-[300px] lg:w-[400px] xl:w-[500px]">
+                  <div className="flex items-center justify-end w-full h-full">
+                    <div className="w-full max-w-[500px]">
                       <img
                         src={login_img}
                         alt="The image illustrates a person from behind, seated at a desk with a four-monitor computer setup, in an environment with a light blue and white color scheme, featuring a potted plant to the right."
-                        width="100%"
+                        className="w-full h-auto object-contain"
                       />
                     </div>
                   </div>
