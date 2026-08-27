@@ -426,7 +426,7 @@ function Login() {
           <div
             aria-labelledby="loginHeading"
             role="region"
-            className="min-h-screen flex items-center justify-center px-4 py-10 md:px-10 lg:px-16"
+            className="min-h-screen flex flex-col items-center justify-center px-4 py-10 md:px-10 lg:px-16"
           >
             <div className="w-full max-w-4xl md:p-4 lg:p-10 p-4 bg-base-100 text-base-content op-card">
               <div className="w-[250px] h-[66px] inline-block overflow-hidden">
