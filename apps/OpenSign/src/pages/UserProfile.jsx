@@ -181,15 +181,7 @@ function UserProfile() {
     const parseFile = new Parse.File(name, pdfFile);
 
     try {
-      const response = await parseFile.save({
-        progress: (progressValue, loaded, total) => {
-          if (progressValue !== null) {
-            const percentCompleted = Math.round((loaded * 100) / total);
-            // console.log("percentCompleted ", percentCompleted);
-            setpercentage(percentCompleted);
-          }
-        }
-      });
+      const response = await parseFile.save();
       // // The response object will contain information about the uploaded file
       // console.log("File uploaded:", response);
 
