@@ -12,9 +12,7 @@ export function useManifestUrl(appName, logo) {
       background_color: "#ffffff",
       ...(logo && {
         icons: [
-          { src: logo, type: "image/png", sizes: "64x64 32x32 24x24 16x16" },
-          { src: logo, type: "image/png", sizes: "192x192" },
-          { src: logo, type: "image/png", sizes: "512x512" }
+          { src: logo, type: "image/png", sizes: "any" }
         ]
       })
     };
