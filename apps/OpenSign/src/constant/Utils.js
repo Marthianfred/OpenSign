@@ -1501,39 +1501,9 @@ export const addInitialData = (signerPos, setXyPosition, value, userId) => {
   });
 };
 
-//function for embed document id
+// function for embed document id
 export const embedDocId = async (pdfOriginalWH, pdfDoc, documentId) => {
-  const appName = "WaveSign™";
-  // `fontBytes` is used to embed custom font in pdf
-  const fontBytes = await fileasbytes(
-    "https://cdn.opensignlabs.com/webfonts/times.ttf"
-  );
-  pdfDoc.registerFontkit(fontkit);
-  const font = await pdfDoc.embedFont(fontBytes, { subset: true });
-  //pdfOriginalWH contained all pdf's pages width and height
-  for (let i = 0; i < pdfOriginalWH?.length; i++) {
-    const fontSize = 10;
-    const textContent = documentId && `${appName} DocumentId: ${documentId} `;
-    const pages = pdfDoc.getPages();
-    const page = pages[i];
-    const getSize = pdfOriginalWH[i];
-    try {
-      const getObj = compensateRotation(
-        page.getRotation().angle,
-        10,
-        5,
-        1,
-        getSize,
-        fontSize,
-        rgb(0.5, 0.5, 0.5),
-        font,
-        page
-      );
-      page.drawText(textContent, getObj);
-    } catch (err) {
-      console.log("Err in embed docId on page", i + 1, err?.message);
-    }
-  }
+  // Disabled by user request: no longer embed "WaveSign DocumentId" in the PDF header.
 };
 
 // function for convert input text value in image
