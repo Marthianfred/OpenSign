@@ -2559,10 +2559,9 @@ export const embedWidgetsToDoc = async (
     const pdfBytes = await pdfDoc.saveAsBase64({ useObjectStreams: false });
     return pdfBytes;
   } else {
-    return {
-      error:
-        "This pdf is not compatible with opensign please contact <support@opensignlabs.com>"
-    };
+    throw new Error(
+      "This pdf is not compatible with opensign please contact <fcampos@wave.com.ve>"
+    );
   }
 };
 

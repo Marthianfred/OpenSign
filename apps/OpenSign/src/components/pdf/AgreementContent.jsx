@@ -96,19 +96,20 @@ function AgreementContent(props) {
             {t("term-cond-p28", { appName: appName })}
           </span>
               <hr className="bg-[#9f9f9f] w-full my-[15px]" />
-              <span className="mt-2">
-                {t("term-cond-p29", { appName: appName })}
-              </span>
-              <a
-                href="www.opensignlabs.com"
-                target="_blank"
-                className="text-blue-700 cursor-pointer"
-              >
-                www.opensignlabs.com
-              </a>
+          <span className="mt-2">
+            {t("term-cond-p29", { appName: appName })}
+          </span>
+          <a
+            href="www.wave.com.ve"
+            target="_blank"
+            className="text-blue-700 cursor-pointer"
+          >
+            www.wave.com.ve
+          </a>
 
-              <span>{t("term-cond-p30")}</span>
-              <span className="font-medium"> support@opensignlabs.com </span>
+          <span>{t("term-cond-p30")}</span>
+          <span className="font-medium"> fcampos@wave.com.ve </span>
+          with the Subject line “Document Security Review.”
           <hr className="bg-[#9f9f9f] w-full my-[15px]" />
           <div className="mt-6 flex justify-start gap-2">
             <button
